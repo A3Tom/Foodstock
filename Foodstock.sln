@@ -9,6 +9,10 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Foodstock.Database", "Foods
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodstock.Service", "Foodstock.Service\Foodstock.Service.csproj", "{0D05C9CA-2AFD-4A7A-AD59-DE60A330AB9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodstock.Data", "Foodstock.Data\Foodstock.Data.csproj", "{9B4CCE56-A7CB-4D3A-B534-229995C53200}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodstock.Domain", "Foodstock.Domain\Foodstock.Domain.csproj", "{17249CBB-03BD-40F5-9269-E92E026E8611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{0D05C9CA-2AFD-4A7A-AD59-DE60A330AB9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D05C9CA-2AFD-4A7A-AD59-DE60A330AB9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D05C9CA-2AFD-4A7A-AD59-DE60A330AB9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B4CCE56-A7CB-4D3A-B534-229995C53200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B4CCE56-A7CB-4D3A-B534-229995C53200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B4CCE56-A7CB-4D3A-B534-229995C53200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B4CCE56-A7CB-4D3A-B534-229995C53200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17249CBB-03BD-40F5-9269-E92E026E8611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17249CBB-03BD-40F5-9269-E92E026E8611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17249CBB-03BD-40F5-9269-E92E026E8611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17249CBB-03BD-40F5-9269-E92E026E8611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

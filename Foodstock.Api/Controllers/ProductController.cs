@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Foodstock.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/{action}")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;

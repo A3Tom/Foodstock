@@ -1,17 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Foodstock.Data.Contexts;
 using Foodstock.Service.Classes;
 using Foodstock.Service.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Foodstock.Api
 {
@@ -29,7 +24,12 @@ namespace Foodstock.Api
         {
             services.AddControllers();
 
-            services.AddSingleton<IProductService, ProductService>();
+            services.AddDbContext<FoodstockDbContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("FoodstockDbContext"));
+            });
+
+            services.AddScoped <IProductService, ProductService>();
+            services.AddScoped <ICategoryService, CategoryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

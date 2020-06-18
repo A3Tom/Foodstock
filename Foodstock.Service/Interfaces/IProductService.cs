@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
+using Foodstock.Domain.Models;
 
 namespace Foodstock.Service.Interfaces
 {
     public interface IProductService
     {
-        Task<object> GetProductById(int Id);
+        Task<Product> GetProductById(int productId);
     }
 }

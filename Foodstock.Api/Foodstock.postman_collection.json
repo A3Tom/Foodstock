@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "e67b0a7a-aa82-48db-8239-32a1715ab3c6",
+		"name": "Foodstock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "AddProducts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"ID\": 2,\r\n    \"Name\": \"Pork\",\r\n    \"ProductType\": 2,\r\n    \"Price\": 2.43,\r\n    \"Barcode\": \"NoIntaeThisMate123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{defaultVersion}}/{{products}}/AddProducts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{defaultVersion}}",
+								"{{products}}",
+								"AddProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{defaultVersion}}/{{productController}}/GetAllProducts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{defaultVersion}}",
+								"{{productController}}",
+								"GetAllProducts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GetAllCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{defaultVersion}}/{{categoriesController}}/GetAllCategories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{defaultVersion}}",
+								"{{categoriesController}}",
+								"GetAllCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "080fc8f9-88fd-4c71-b2fb-29cd6b03a42b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bc1f141c-4889-4762-9d62-7b40cafbe301",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "a4600642-6107-4d97-a102-d6e7f8ed4e0e",
+			"key": "baseUrl",
+			"value": "https://localhost:44395/api",
+			"type": "string"
+		},
+		{
+			"id": "603f05c3-558f-4313-b203-37beb76ba60d",
+			"key": "defaultVersion",
+			"value": "v1",
+			"type": "string"
+		},
+		{
+			"id": "5af78019-f26b-44bc-a2cf-2c0952791256",
+			"key": "productController",
+			"value": "Product",
+			"type": "string"
+		},
+		{
+			"id": "302fdf5b-76f5-42ba-97ec-418ad2627091",
+			"key": "users",
+			"value": "Users",
+			"type": "string"
+		},
+		{
+			"id": "3bafd602-e46b-441c-9a96-f7ea6d1484f5",
+			"key": "categoriesController",
+			"value": "Category",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
